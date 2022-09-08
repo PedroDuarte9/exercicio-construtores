@@ -19,10 +19,16 @@ public class Program {
         System.out.println("Digite o número do Titular: ");
         conta.setNumero(sc.nextInt());
 
-        System.out.println("Digite um valor para iniciar a conta: ");
-        double deposito = sc.nextDouble();
-        conta.deposito(deposito);
-
+        System.out.println("Deseja Fazer um depósito inicial Sim ou Não ? ");
+        char opc = sc.next().charAt(0);
+        if(opc == 's') {
+            System.out.println("Digite o valor do depósito: ");
+            double deposito = sc.nextDouble();
+            conta.deposito(deposito);
+        }
+        else{
+            conta.deposito(0.0);
+        }
         System.out.println(conta);
 
         System.out.println("Você deseja sacar algum valor ?");
