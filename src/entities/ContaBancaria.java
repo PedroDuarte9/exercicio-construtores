@@ -35,12 +35,12 @@ public class ContaBancaria {
         return saldo;
     }
 
-    public double deposito(double deposito){
-        return getSaldo() + deposito;
+    public void deposito(double deposito){
+        this.saldo = getSaldo() + deposito;
     }
 
-    public double saque(double saque){
-       return getSaldo() - saque;
+    public void saque(double saque){
+       this.saldo = getSaldo() - saque;
     }
 
 

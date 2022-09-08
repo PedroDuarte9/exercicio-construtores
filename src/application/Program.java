@@ -20,12 +20,14 @@ public class Program {
         conta.setNumero(sc.nextInt());
 
         System.out.println("Digite um valor para iniciar a conta: ");
-        double deposito = conta.deposito(sc.nextDouble());
+        double deposito = sc.nextDouble();
+        conta.deposito(deposito);
 
         System.out.println(conta);
 
         System.out.println("Você deseja sacar algum valor ?");
-        double saque = conta.saque(sc.nextDouble());
+        double saque = sc.nextDouble();
+        conta.saque(saque);
 
         System.out.println(conta);
 
