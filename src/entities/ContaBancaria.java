@@ -3,7 +3,7 @@ package entities;
 public class ContaBancaria {
     private String nome;
     private int numero;
-    private double saldo;
+    protected double saldo;
 
     public ContaBancaria() {
 
@@ -40,7 +40,7 @@ public class ContaBancaria {
     }
 
     public void saque(double saque){
-       this.saldo = getSaldo() - saque;
+       this.saldo = getSaldo() - saque - 5.0;
     }
 
 
